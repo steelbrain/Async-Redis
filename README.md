@@ -30,7 +30,7 @@ $RedisSub->OnMessage('FirstChannel', async function(string $Message){
 });
 $RedisSub->WaitHandle->join(); // This will stop the program from halting, because this is in infinite loop, the program won't go any further
 ```
-As you can see in the example above, You can not continue your program and listen for messages, It kind-of becomes a blocking way.
+As you can see in the example above, You can not continue your program and listen for messages at the same time, It kind-of becomes a blocking way.
 Therefore the solution I use is to make the init function of your Server Sided App an async one, so you can wait on both of them.
 ```hack
 class MyServerSidedApp{
