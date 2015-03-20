@@ -43,11 +43,7 @@ class MyServerSidedApp{
     });
   }
   public async function Init():Awaitable<void>{
-    // This is where I do all the stuff, like reading from queues and responding to them etc.
-    while(true){
-      await SleepWaitHandle::create(1 * 1000000);
-      echo "I am still running\n";
-    }
+    // Do the regular app stuff here..
   }
 }
 $App = new MyServerSidedApp();
